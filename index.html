@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Taktee : Taktee - Custom Language Parser" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Taktee</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/blacksmoke26/Taktee">View on GitHub</a>
+
+          <h1 id="project_title">Taktee</h1>
+          <h2 id="project_tagline">Taktee - Custom Language Parser</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/blacksmoke26/Taktee/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/blacksmoke26/Taktee/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="taktee" class="anchor" href="#taktee"><span class="octicon octicon-link"></span></a>Taktee</h1>
+
+<h3>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h3>
+
+<p>Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of verse); the pause (in reading poetry), The custom language parser. I just developing it in free time for fun and practice. I love to write PCRE patterns and learn new programming ways to improve my skills and knowledge. I always want to have my custom language which do quick tasks on web via command line web tool. After getting this idea, i started to work on that parser, but honeslty I love my URDU language that's why I named it in URDU.</p>
+
+<h4>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h4>
+
+<ul>
+<li>Parse line by line based on statments ended by semi colon (;).</li>
+<li>Opening and Closing Braces (can be change)</li>
+<li>Comment lines</li>
+<li>Multi line statments on each line</li>
+<li>Better error handling</li>
+<li>Internationalization (i18n) of error messages</li>
+<li>Type hinting/casting for Parameters</li>
+<li>Easily customized and well documented</li>
+<li>Plugin based, develope Libraries, Functions without touching core/base files</li>
+<li>Beautify Output</li>
+<li>Detailed debug information</li>
+<li>Easy to use</li>
+</ul><h3>
+<a name="use" class="anchor" href="#use"><span class="octicon octicon-link"></span></a>Use</h3>
+
+<h4>
+<a name="globaldefined-functions" class="anchor" href="#globaldefined-functions"><span class="octicon octicon-link"></span></a>Global/Defined functions</h4>
+
+<div class="highlight highlight-php"><pre><span class="c1"># Debug Mode (Remove or comment the line for off)</span>
+<span class="nb">define</span> <span class="p">(</span><span class="s1">'TAKTEE_DUBUG_OUTPUT'</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+<span class="c1"># Add executed code expression in Output (Remove or comment the line for off)</span>
+<span class="nb">define</span> <span class="p">(</span><span class="s1">'TAKTEE_DEBUG_CODE_OUTPUT'</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+
+<span class="c1">// Include Taktee</span>
+<span class="k">include</span> <span class="p">(</span> <span class="s2">"bootstrap.php"</span> <span class="p">);</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Say Hay to $name</span>
+<span class="sd"> * </span>
+<span class="sd"> * @param string $name Any name</span>
+<span class="sd"> */</span>
+<span class="k">function</span> <span class="nf">sayHay</span> <span class="p">(</span> <span class="nv">$name</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">echo</span> <span class="s1">'Hay '</span> <span class="o">.</span> <span class="nv">$name</span> <span class="o">.</span> <span class="s1">'!'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nv">$code</span> <span class="o">=</span> <span class="s1">'</span>
+<span class="s1">@{</span>
+<span class="s1">    // It is the Function library Plugin, @see /functions/TakteeFunctionCommands.php</span>
+<span class="s1">    // I use ^core for already defined global function</span>
+<span class="s1">    ^core [ sayHay ( "Junaid Atari" ) ];</span>
+<span class="s1">}</span>
+<span class="s1">'</span><span class="p">;</span>
+
+<span class="c1">// Now the fun part</span>
+
+<span class="nv">$taktee</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Taktee</span> <span class="p">(</span> <span class="nv">$code</span> <span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span> <span class="nv">$taktee</span><span class="o">-&gt;</span><span class="na">hasError</span> <span class="p">()</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// print_r for error details</span>
+    <span class="k">echo</span> <span class="nv">$taktee</span><span class="o">-&gt;</span><span class="na">getError</span><span class="p">();</span>
+
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Convert the output in text and display</span>
+<span class="k">echo</span> <span class="nx">TakteeOuputBeautifier</span><span class="o">::</span><span class="na">asText</span> <span class="p">(</span> <span class="nv">$taktee</span><span class="o">-&gt;</span><span class="na">getOutput</span><span class="p">()</span> <span class="p">);</span>
+</pre></div>
+
+<h5>
+<a name="output" class="anchor" href="#output"><span class="octicon octicon-link"></span></a>Output</h5>
+
+<div class="highlight highlight-text"><pre>Hay Junaid Atari!
+</pre></div>
+
+<h5>
+<a name="debug-output" class="anchor" href="#debug-output"><span class="octicon octicon-link"></span></a>Debug Output</h5>
+
+<div class="highlight highlight-php"><pre><span class="nb">print_r</span> <span class="p">(</span> <span class="nv">$taktee</span><span class="o">-&gt;</span><span class="na">getOutput</span><span class="p">()</span> <span class="p">);</span>
+</pre></div>
+
+<p><strong>Turns to</strong></p>
+
+<div class="highlight highlight-text"><pre>Array
+(
+    [0] =&gt; Array
+        (
+            [0] =&gt; TakteeOutput Object
+                (
+                    [output:protected] =&gt; Hay Junaid Atari!
+                    [code:protected] =&gt; ^core [ sayHay ( "Junaid Atari" ) ];
+                    [debug:protected] =&gt; TakteeOutputDebug Object
+                        (
+                            [debugInfo:protected] =&gt; Array
+                                (
+                                    [type] =&gt; core
+                                    [command] =&gt; core
+                                    [function] =&gt; sayHay
+                                    [params] =&gt; Array
+                                        (
+                                            [0] =&gt; Junaid Atari
+                                        )
+
+                                )
+
+                        )
+
+                    [lineNo:protected] =&gt; 4
+                )
+
+        )
+
+)
+</pre></div>
+
+<h3>
+<a name="debug-error--echo" class="anchor" href="#debug-error--echo"><span class="octicon octicon-link"></span></a>Debug Error : echo</h3>
+
+<div class="highlight highlight-php"><pre><span class="c1">// As string</span>
+<span class="k">echo</span> <span class="nv">$taktee</span><span class="o">-&gt;</span><span class="na">getError</span><span class="p">();</span>
+</pre></div>
+
+<p>Turns to</p>
+
+<div class="highlight highlight-text"><pre>Taktee syntax error (27): missing ; at end of the line in foo/bar/file.php on line 5
+</pre></div>
+
+<h3>
+<a name="debug-error--print_r-" class="anchor" href="#debug-error--print_r-"><span class="octicon octicon-link"></span></a>Debug Error : print_r ()</h3>
+
+<div class="highlight highlight-php"><pre><span class="c1">// As detailed object</span>
+<span class="nb">print_r</span> <span class="p">(</span> <span class="nv">$taktee</span><span class="o">-&gt;</span><span class="na">getError</span><span class="p">()</span> <span class="p">);</span>
+</pre></div>
+
+<p>Turns to</p>
+
+<div class="highlight highlight-html"><pre>TakteeError Object
+(
+    [category:protected] =&gt; Syntax error
+    [errorNumber:protected] =&gt; 27
+    [message:protected] =&gt; missing ; at end of the line
+    [line:protected] =&gt; 5
+    [code:protected] =&gt; }1
+    [file:protected] =&gt; foo/bar/file.php
+)
+</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Taktee maintained by <a href="https://github.com/blacksmoke26">blacksmoke26</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
