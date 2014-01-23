@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class TakteeFunction | Taktee - Custom Language Parser</title>
+
+	<script type="text/javascript" src="resources/combined.js?4220437581"></script>
+	<script type="text/javascript" src="elementlist.js?1612322273"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Functions.html">Functions</a>
+						</li>
+				<li><a href="package-Libraries.html">Libraries</a>
+						</li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li class="active"><a href="package-Taktee.html">Taktee</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Taktee.html">Taktee</a></li>
+				<li><a href="class-TakteeBase.html">TakteeBase</a></li>
+				<li><a href="class-TakteeCodeLine.html">TakteeCodeLine</a></li>
+				<li><a href="class-TakteeComments.html">TakteeComments</a></li>
+				<li><a href="class-TakteeError.html">TakteeError</a></li>
+				<li><a href="class-TakteeErrorInternal.html">TakteeErrorInternal</a></li>
+				<li class="active"><a href="class-TakteeFunction.html">TakteeFunction</a></li>
+				<li><a href="class-TakteeLibrary.html">TakteeLibrary</a></li>
+				<li><a href="class-TakteeLinesMap.html">TakteeLinesMap</a></li>
+				<li><a href="class-TakteeOuputBeautifier.html">TakteeOuputBeautifier</a></li>
+				<li><a href="class-TakteeOutput.html">TakteeOutput</a></li>
+				<li><a href="class-TakteeOutputDebug.html">TakteeOutputDebug</a></li>
+				<li><a href="class-TakteeOutputNull.html">TakteeOutputNull</a></li>
+				<li><a href="class-TakteeParameters.html">TakteeParameters</a></li>
+				<li><a href="class-TakteeParameterTypes.html">TakteeParameterTypes</a></li>
+				<li><a href="class-TakteeUtils.html">TakteeUtils</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Taktee.html" title="Summary of Taktee"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TakteeFunction</h1>
+
+
+	<div class="description">
+	
+<p>Taktee Basic structure plugin class for writting additional functions for the
+Taktee code This is just template class, use it by extending</p>
+
+<p>requires PHP version 5.3+</p>
+
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-CommandsTFunc.html">CommandsTFunc</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Taktee.html">Taktee</a><br />
+
+				<b>Category:</b>
+				Helper<br />
+				<b>Copyright:</b>
+				2014 Junaid Atari<br />
+				<b>License:</b>
+				<a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a><br />
+				<b>Author:</b>
+				Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Version:</b>
+				0.1<br />
+				<b>See:</b>
+				TakteeFunctionCommands<br />
+		<b>Located at</b> taktee/helpers/Function.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>integer <var>$lineNumber</var></span>, <span>string <var>$expression</var></span>, <span>array <var>$variables</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructor function</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructor function</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lineNumber</var></dt>
+					<dd><code>integer</code><br>$lineNumber Line number</dd>
+					<dt><var>$expression</var></dt>
+					<dd><code>string</code><br>$expression Line code</dd>
+					<dt><var>$variables</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBaseOutputObject" id="_getBaseOutputObject">
+
+		<td class="attributes"><code>
+			final public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBaseOutputObject">#</a>
+		<code>getBaseOutputObject( )</code>
+
+		<div class="description short">
+			
+<p>Get the base output Note: Only use for Taktee base classes</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the base output Note: Only use for Taktee base classes</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setErrorOutput" id="_setErrorOutput">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setErrorOutput">#</a>
+		<code>setErrorOutput( <span>integer <var>$no</var></span>, <span>array <var>$vars</var> = <span class="php-keyword1">array</span> () </span> )</code>
+
+		<div class="description short">
+			
+<p>Throw the Taktee error exception</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Throw the Taktee error exception</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$no</var></dt>
+					<dd><code>integer</code><br>$no Error ID/Number</dd>
+					<dt><var>$vars</var></dt>
+					<dd><code>array</code><br>$vars Variables to replace from error message</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>False<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TakteeError.html">TakteeError</a></code></code><br />
+						<code><code><a href="class-TakteeErrorInternal.html">TakteeErrorInternal</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCustomErrorOutput" id="_setCustomErrorOutput">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCustomErrorOutput">#</a>
+		<code>setCustomErrorOutput( <span>integer <var>$no</var></span>, <span>string <var>$category</var></span>, <span>string <var>$message</var></span>, <span>array <var>$vars</var> = <span class="php-keyword1">array</span> () </span> )</code>
+
+		<div class="description short">
+			
+<p>Throw the custom Taktee error exception</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Throw the custom Taktee error exception</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$no</var></dt>
+					<dd><code>integer</code><br>$no Error ID/Number</dd>
+					<dt><var>$category</var></dt>
+					<dd><code>string</code><br>$category Error Category</dd>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code><br>$message Error Message</dd>
+					<dt><var>$vars</var></dt>
+					<dd><code>array</code><br>$vars Variables to replace from error message</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>False<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TakteeError.html">TakteeError</a></code></code><br />
+						<code><code><a href="class-TakteeErrorInternal.html">TakteeErrorInternal</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code>parse( )</code>
+
+		<div class="description short">
+			
+<p>Parce expression/line code Note: Method should be overrided</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parce expression/line code Note: Method should be overrided</p>
+
+
+
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="beforeExecute" id="_beforeExecute">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_beforeExecute">#</a>
+		<code>beforeExecute( )</code>
+
+		<div class="description short">
+			
+<p>Event function: Execute this function after main Taktee execution</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event function: Execute this function after main Taktee execution</p>
+
+
+
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code>execute( )</code>
+
+		<div class="description short">
+			
+<p>Execute the parsed expression's logic</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute the parsed expression's logic</p>
+
+
+
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="afterExecute" id="_afterExecute">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_afterExecute">#</a>
+		<code>afterExecute( <span>object <var>$outputObj</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event function: Execute this function after main Taktee execution</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event function: Execute this function after main Taktee execution</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$outputObj</var></dt>
+					<dd><code>object</code><br>$outputObj Output object</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>TakteeOutput | TakteeOutputNull<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-TakteeOutput.html">TakteeOutput</a></code></code><br />
+						<code><code><a href="class-TakteeOutputNull.html">TakteeOutputNull</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getValue" id="_getValue">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getValue">#</a>
+		<code>getValue( )</code>
+
+		<div class="description short">
+			
+<p>Get the output value of Functions plugin</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the output value of Functions plugin</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+				<h4>See</h4>
+				<div class="list">
+						TakteeFunction::init ()<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="lineNo" id="$lineNo">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$lineNo</var>		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$lineNo" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Line number</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Line number</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="config" id="$config">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+<var>$config</var>		</td>
+		<td class="value"><code>[]</code></td>
+		<td class="description"><div>
+			<a href="#$config" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Configuration data</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Configuration data</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="expr" id="$expr">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$expr</var>		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$expr" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Code expression</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Code expression</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="sessionId" id="$sessionId">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$sessionId</var>		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$sessionId" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Session ID of line</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Session ID of line</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="output" id="$output">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$output</var>		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$output" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Generated output</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Generated output</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="baseOutput" id="$baseOutput">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$baseOutput</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$baseOutput" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Taktee base generated output oubjects</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Taktee base generated output oubjects</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="scriptPath" id="$scriptPath">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$scriptPath</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$scriptPath" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Current executing code script</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Current executing code script</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="basePath" id="$basePath">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$basePath</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$basePath" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Base path of Taktee</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Base path of Taktee</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="language" id="$language">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$language</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$language" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Messages language</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Messages language</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="variables" id="$variables">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+<var>$variables</var>		</td>
+		<td class="value"><code><span class="php-keyword1">array</span> ()</code></td>
+		<td class="description"><div>
+			<a href="#$variables" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>variables cache</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>variables cache</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="librariesDirs" id="$librariesDirs">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+<var>$librariesDirs</var>		</td>
+		<td class="value"><code><span class="php-keyword1">array</span> ()</code></td>
+		<td class="description"><div>
+			<a href="#$librariesDirs" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Additonal libraries for plugin</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Additonal libraries for plugin</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="functionsDirs" id="$functionsDirs">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+<var>$functionsDirs</var>		</td>
+		<td class="value"><code><span class="php-keyword1">array</span> ()</code></td>
+		<td class="description"><div>
+			<a href="#$functionsDirs" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Additonal functions for plugin</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Additonal functions for plugin</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Taktee - Custom Language Parser API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

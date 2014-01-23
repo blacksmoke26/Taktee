@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class CommandsTFunc | Taktee - Custom Language Parser</title>
+
+	<script type="text/javascript" src="resources/combined.js?4220437581"></script>
+	<script type="text/javascript" src="elementlist.js?1612322273"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Functions.html">Functions</a>
+						</li>
+				<li><a href="package-Libraries.html">Libraries</a>
+						</li>
+				<li><a href="package-None.html">None</a>
+						</li>
+				<li><a href="package-Taktee.html">Taktee</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-CommandsTFunc.html">CommandsTFunc</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Functions.html" title="Summary of Functions"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="todo.html" title="Todo list"><span>Todo</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class CommandsTFunc</h1>
+
+
+	<div class="description">
+	
+<p>Functions command Plugin for Taktee Note: It is a Test plugin, 90% chances to
+be removed or re-coded in future.</p>
+
+<p>requires PHP version 5.3+</p>
+
+<p>About plugin:</p>
+
+<blockquote>
+	<p>Starts with ^ or _ Command <code>core</code> (predefined) or class name
+	<code>test</code> (@see ../libraries/TestTakteeLibrary.php)</p>
+</blockquote>
+
+<p>Parameter Types: null, string, bool, int, float</p>
+
+<p>Syntax:</p>
+
+<pre>
+_Type [ functionName ( ParamType ParamValue ) ];
+</pre>
+
+<p>or</p>
+
+<pre>
+^Type [ functionName ( ParamType ParamValue ) ];
+</pre>
+
+<p>Example 1: (already defined global function)</p>
+
+<pre>
+^core [ sayHello (<span
+class="php-quote">&quot;Name&quot;</span>) ];
+</pre>
+
+<p>Example 2: (class method)</p>
+
+<pre>
+_test [ helloWorld () ];
+</pre>
+
+<p>Example 3: (class method, passing null)</p>
+
+<pre>
+_test [ helloWorld ( <span class="php-keyword1">null</span> ) ];
+</pre>
+
+<p>Example 4: (class static method, type casting)</p>
+
+<pre>
+_test [ increase (int <span
+class="php-quote">&quot;1s&quot;</span>) ]; / will convert (string value) to (integer value)
+</pre>
+
+<p>or</p>
+
+<pre>
+_test [ increase (<span class="php-num">50</span>) ]; / <span
+class="php-num">10</span> + <span class="php-num">50</span> = <span
+class="php-num">60</span> output
+</pre>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-TakteeFunction.html"><span>TakteeFunction</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>CommandsTFunc</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		<b>Package:</b> <a href="package-Functions.html">Functions</a><br />
+
+				<b>Category:</b>
+				Plugin<br />
+				<b>Copyright:</b>
+				2014 Junaid Atari<br />
+				<b>License:</b>
+				<a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a><br />
+				<b>Author:</b>
+				Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				<b>Version:</b>
+				0.2<br />
+				<b>See:</b>
+				TestTakteeLibrary<br />
+				<b>See:</b>
+				<code><code><a href="class-TakteeFunction.html">TakteeFunction</a></code></code><br />
+				<b>See:</b>
+				<code><code><a href="class-TakteeParameters.html">TakteeParameters</a></code></code><br />
+				<b>See:</b>
+				<code><code><a href="class-TakteeParameterTypes.html">TakteeParameterTypes</a></code></code><br />
+		<b>Located at</b> taktee/functions/CommandsTFunc.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="beforeExecute" id="_beforeExecute">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_beforeExecute">#</a>
+		<code>beforeExecute( )</code>
+
+		<div class="description short">
+			
+<p>Instialize the class</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Instialize the class</p>
+
+
+
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TakteeFunction.html#_beforeExecute">TakteeFunction::beforeExecute()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parse" id="_parse">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parse">#</a>
+		<code>parse( )</code>
+
+		<div class="description short">
+			
+<p>Parse the line code and return details for execution</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parse the line code and return details for execution</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>Array | TakteeOutputNull<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TakteeFunction.html#_parse">TakteeFunction::parse()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code>execute( )</code>
+
+		<div class="description short">
+			
+<p>Execute the plugin</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute the plugin</p>
+
+
+
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-TakteeFunction.html#_execute">TakteeFunction::execute()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerLibrary" id="_registerLibrary">
+
+		<td class="attributes"><code>
+			 protected 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerLibrary">#</a>
+		<code>registerLibrary( <span>mixed <var>$class</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register the required library</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register the required library</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True on registered | False on fail<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="executeCommand" id="_executeCommand">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_executeCommand">#</a>
+		<code>executeCommand( <span>string <var>$type</var></span>, <span>string <var>$cmd</var></span>, <span>string <var>$function</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span> () </span> )</code>
+
+		<div class="description short">
+			
+<p>Execute the logic, returned by TakteeFunctionCommands::parse();</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute the logic, returned by TakteeFunctionCommands::parse();</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type Type of function, library or core</dd>
+					<dt><var>$cmd</var></dt>
+					<dd><code>string</code><br>$cmd Type/Command name</dd>
+					<dt><var>$function</var></dt>
+					<dd><code>string</code><br>$function Command's function name to be executed</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params List of function parameters</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>FALSE on error | string Ouput of execution<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-TakteeFunction.html#methods">TakteeFunction</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TakteeFunction.html#___construct">__construct()</a>, 
+			<a href="class-TakteeFunction.html#_afterExecute">afterExecute()</a>, 
+			<a href="class-TakteeFunction.html#_getBaseOutputObject">getBaseOutputObject()</a>, 
+			<a href="class-TakteeFunction.html#_getValue">getValue()</a>, 
+			<a href="class-TakteeFunction.html#_setCustomErrorOutput">setCustomErrorOutput()</a>, 
+			<a href="class-TakteeFunction.html#_setErrorOutput">setErrorOutput()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="commandTypes" id="$commandTypes">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+<var>$commandTypes</var>		</td>
+		<td class="value"><code>[]</code></td>
+		<td class="description"><div>
+			<a href="#$commandTypes" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Supported commands</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Supported commands</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-TakteeFunction.html#properties">TakteeFunction</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-TakteeFunction.html#$baseOutput"><var>$baseOutput</var></a>, 
+			<a href="class-TakteeFunction.html#$basePath"><var>$basePath</var></a>, 
+			<a href="class-TakteeFunction.html#$config"><var>$config</var></a>, 
+			<a href="class-TakteeFunction.html#$expr"><var>$expr</var></a>, 
+			<a href="class-TakteeFunction.html#$functionsDirs"><var>$functionsDirs</var></a>, 
+			<a href="class-TakteeFunction.html#$language"><var>$language</var></a>, 
+			<a href="class-TakteeFunction.html#$librariesDirs"><var>$librariesDirs</var></a>, 
+			<a href="class-TakteeFunction.html#$lineNo"><var>$lineNo</var></a>, 
+			<a href="class-TakteeFunction.html#$output"><var>$output</var></a>, 
+			<a href="class-TakteeFunction.html#$scriptPath"><var>$scriptPath</var></a>, 
+			<a href="class-TakteeFunction.html#$sessionId"><var>$sessionId</var></a>, 
+			<a href="class-TakteeFunction.html#$variables"><var>$variables</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Taktee - Custom Language Parser API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
