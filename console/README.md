@@ -4,22 +4,27 @@
 Taktee Console is a web interface application to execute the Taktee code via Ajax.
 
 ### Screenshot
-<img alt="Taktee Console" src="http://i43.tinypic.com/25uqv6c.jpg">
+#####Light and Shine Theme
+<img alt="Taktee Console (Light Theme)" src="http://i39.tinypic.com/2vcf3o0.jpg">
+#####Dark Theme
+<img alt="Taktee Console (Dark Theme)" src="http://i39.tinypic.com/107521d.png">
 
 ### Requirments
 - Taktee Parser
 - jQuery library
 
 ### Features
-
-#### Console Plugin
-- Vast API options
-- Own cosole commands
-- Arrow Up/Down keys to jump to the code line
-- Easy to Use and extent
-- Mutiple code statments (save in code history)
-- Dark Theme included
-- Tiny HTML structure
+- Version 1.0.1
+  - Code highlight functions
+  - Light and Shine Theme
+- Version 1.0
+  - Vast API options
+  - Own cosole commands
+  - Arrow Up/Down keys to jump to the code line
+  - Easy to Use and extent
+  - Mutiple code statments (save in code history)
+  - Dark Theme included
+  - Tiny HTML structure
 
 ### Usage
 - Download the Taktee Package.
@@ -38,4 +43,5 @@ Taktee Console is a web interface application to execute the Taktee code via Aja
 `Note: For javascript and PHP setup please check the file index.php and post.php.`
 
 ### CSS Theme
+Please modify the `/console/css/theme-light.css`
 Please modify the `/console/css/theme-dark.css`
