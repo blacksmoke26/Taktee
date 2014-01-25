@@ -1,0 +1,22 @@
+/**
+ * Taktee Console v1.0.1
+ * @author Junaid Atari <mj.atari@gmail.com>
+ * Theme: Light and Shine
+*/
+
+#webconsole { width: 800px; height: 350px; overflow: auto; background-color: #FFF; color: #136086; border: 1px solid #136086; border-left-width: 25px; font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace; padding: 8px; padding-left: 10px; font-size: 14px; }
+#webconsole a { color: #420082; }
+#webconsole .buffer { line-height: 19px; margin: 0px; padding: 0px; font-size: inherit; font-family: inherit; }
+#webconsole .buffer .inrcmd { color: #ff1493 !important; }
+#webconsole .buffer .inrcode { color: blue !important; }
+#webconsole .buffer .inrerror { color: red !important; }
+#webconsole .buffer .inroutput { color: #A02020 !important; background-color: #FCF5C2; display: block; margin-top: 1px; margin-bottom: 5px; padding: 5px; }
+#webconsole .buffer .inrstrnative { color: #038383 !important; }
+#webconsole .inrcode_comment { color: #008200 !important; }
+#webconsole .takteecode { color: #008200 !important; }
+#webconsole .lineno { color: #000000 !important; }
+#webconsole .takteetags { color: red !important; font-weight:bolder; }
+#webconsole .command.inrccmd { color: #006699 !important; font-weight: bold; }
+#webconsole .iwrapper { margin-top: 5px; background-color: #F7F7F7; border-bottom: 1px solid #E0E0E0; padding-left: 8px; color: #603000; }
+#webconsole .iwrapper .command { width: 97%; border: none; background-color: transparent; color: inherit; font-family: inherit; font-size: inherit; }
+#webconsole .iwrapper .command:focus { border: none; box-shadow: none; padding: none; outline: none; }
