@@ -2,7 +2,7 @@ _commands =
 {
 	exec:function()
 	{
-		parent.addBufferString ( 'Executing...' );
+		parent.addCodeBufferStrNative ( 'Executing...' );
 			
 		if ( $.trim (code) == '' )
 		{
