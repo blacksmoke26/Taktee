@@ -397,7 +397,8 @@ var takteeconsole = function ()
 			if ( typeof ( parent.onRegistred ) === 'function' )
 				parent.onRegistred.call ( this, parent );
 			
-			// Loaded extenal commands			
+			// Loaded extenal commands	
+			// Execute the code		
 			eval (data);
 			
 			setTimeout (function()
@@ -595,7 +596,7 @@ var takteeconsole = function ()
 	 *
 	 * @access public
 	 * @author Junaid Atari <mj.atari@gmail.com>
-	 * @return string
+	 * @return void
 	 */
 	this.addCode = function (str){
 		input.val(str);
