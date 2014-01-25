@@ -5,7 +5,7 @@ Taktee Console is a web interface application to execute the Taktee code via Aja
 
 ### Screenshot
 #####Light and Shine Theme
-<img alt="Taktee Console (Light Theme)" src="http://i39.tinypic.com/2vcf3o0.jpg">
+<img alt="Taktee Console (Light Theme)" src="http://i41.tinypic.com/2vdiiwy.jpg">
 #####Dark Theme
 <img alt="Taktee Console (Dark Theme)" src="http://i39.tinypic.com/107521d.png">
 
@@ -16,6 +16,8 @@ Taktee Console is a web interface application to execute the Taktee code via Aja
 ### Features
 - Version 1.0.1
   - Code highlight functions
+  - New Events and Methods
+  - New Code Viewer
   - Light and Shine Theme
 - Version 1.0
   - Vast API options
