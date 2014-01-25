@@ -9,6 +9,9 @@ Taktee Console is a web interface application to execute the Taktee code via Aja
 #####Dark Theme
 <img alt="Taktee Console (Dark Theme)" src="http://i39.tinypic.com/107521d.png">
 
+### Demo
+<a target="_blank" href="http://blacksmoke.plutohost.net/taktee/console/">Launch Console Demo</a>
+
 ### Requirments
 - Taktee Parser
 - jQuery library
