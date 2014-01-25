@@ -19,6 +19,11 @@ Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of ve
 - Detailed debug information
 - Easy to use
 
+### Links
+- <a target="_blank" href="http://blacksmoke.plutohost.net/taktee/console/">Console Demo</a>
+- <a target="_blank" href="http://blacksmoke.plutohost.net/taktee/">Main Demo</a>
+- <a target="_blank" href="http://blacksmoke.plutohost.net/taktee/reference/">Class Reference</a>
+
 ### Use
 
 #### Global/Defined functions
