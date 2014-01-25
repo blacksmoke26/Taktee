@@ -6,14 +6,12 @@ _commands =
 			
 		if ( $.trim (code) == '' )
 		{
-			parent.addBufferString ( 'Error: No Taktee code given.' );
+			parent.addCodeBufferErrorString ( 'Error: No Taktee code given.' );
 			return true;
 		}
 		
 		if ( typeof ( parent.sendCallback ) === 'function' )
-		{
 			parent.sendCallback.call ( this, code, parent );
-		}
 		
 		parent.focusCommand();
 		return true;
@@ -21,8 +19,11 @@ _commands =
 	
 	clr:function()
 	{
-		buffer.text ( bufferStr );		
-		parent.addBufferString ( 'type "-console help" for help, press ctrl+space for -console keyword.' );
+		parent.addIcmdBufferString ( 'Clearing buffer...' );
+		setTimeout(function(){
+			buffer.text ( bufferStr );		
+			parent.addCodeBufferStrNative ( 'type "-console help" for help, press ctrl+space for -console keyword.' );
+		}, 200);
 		return true;
 	},
 	
@@ -45,7 +46,7 @@ _commands =
 		parent.addBufferString ( "ABOUT\n"+_console['name']+" version: "+_console['ver']);
 		parent.addBufferString ('copyright 2014 <strong>Junaid Atari</strong> (mj.atari@gmail.com)' );
 		parent.addBufferString ('Licence: <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a>' );
-		parent.addBufferString ('Github: <a target="_blank" href="http://blacksmoke26.github.io/Taktee/">Taktee Project</a>' );
+		parent.addBufferString ('View on Github: <a target="_blank" href="http://blacksmoke26.github.io/Taktee/">Taktee Project</a>' );
 		return true;
 	},
 	
@@ -55,18 +56,21 @@ _commands =
 		
 		if (_code == '')
 		{
-			parent.addBufferString ( 'Error: Code is empty.' );
+			parent.addCodeBufferErrorString ( 'Error: Code is empty.' );
 			return true;
 		}
 		
 		codestr = '';
-		
+		var _lins = 1;
 		$.each(_code.split("\n"),function(i,v){
-			codestr+=(i+1)+'. ' + v + "\n";
+			_lins +=1;
+			codestr += '<span class="lineno">' +(i+2)+'.</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="takteecode">' + v + "</span>\n";
 		});
 		
 		parent.addBufferString ( '===================================================================' );
+		parent.addBufferString ( '<span class="lineno">1</span>.&nbsp;&nbsp;<span class="takteetags">@{</span>' );
 		parent.addBufferString ( $.trim(codestr) );
+		parent.addBufferString ( '<span class="lineno">'+(_lins+1)+'</span>.&nbsp;&nbsp;<span class="takteetags">}</span>' );
 		parent.addBufferString ( '===================================================================' );
 		return true;
 	},
