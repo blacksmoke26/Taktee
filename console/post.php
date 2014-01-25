@@ -15,7 +15,7 @@ $taktee = new Taktee ( $code );
 if ( $taktee->hasError () )
 {
 	$err = $taktee->getError();
-	echo ucfirst ( $err->getCategory () ) . ' ('.$err->getNumber().'): ' . $err->getMessage(). '.';
+	echo '@error:' . ucfirst ( $err->getCategory () ) . ' ('.$err->getNumber().'): ' . $err->getMessage(). ' "'.$err->getCode().'" on line '.$err->getLineNumber().'.';
 
     return;
 }
