@@ -12,8 +12,14 @@ include ( "taktee/bootstrap.php" );
 // Just Taktee Code will only capture @{ ... }
 $code = '
 @{
-	// Just say Hello ( see test plugin file /functions/TakteeFunctionCommands.php )
-	_test [ helloWorld () ]; // Just a warm welcome
+	// Routine
+	users.getAll();
+	
+	// Subroutine property
+	users.junaid.name;
+	
+	// Subrutine get property
+	users.ali.get ("name");
 }';
 
 // Create Taktee Object and execute the code
