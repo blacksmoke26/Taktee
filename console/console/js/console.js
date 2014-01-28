@@ -1,12 +1,12 @@
 /**
- * Taktee Web Console
+ * Taktee Web Shell
  * @version 1.0.1
  * @author Junaid Atari <mj.atari@gmail.com>
  * @link https://github.com/blacksmoke26/Taktee/tree/master/console Taktee Console
  * @link http://blacksmoke26.github.io/Taktee/ Taktee Parser
  */
 
-var takteeconsole = function ()
+var TakteeConsole = function ()
 {
 	/**
 	 * @access public
@@ -249,7 +249,10 @@ var takteeconsole = function ()
 			parent.beforeConsoleCommandEntered.call ( this, parent );
 		
 		if ( /^\-console\s[^;]+$/.test( value ) )
-		{
+		{			
+			// Add command to buffer
+			parent.addIcmdBufferString ( value );
+			
 			cmds = value.replace(/^\-console\s/,'').split(' ');
 			
 			if ( !cmds.length )
@@ -573,10 +576,12 @@ var takteeconsole = function ()
 	{
 		if ( /^\@error:/.test (str) )
 		{
+			parent.addCode ('-console showcode');
 			parent.addCodeBufferErrorString ( str.replace (/^@error:/, '') );
 			return;
 		}
 		
+		code = '';
 		buffer.append ( '<span class="inroutput">'+str+'<span>' + "\n" );
 	}
 	

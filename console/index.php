@@ -31,7 +31,7 @@ var $console;
 function startConsole ()
 {
 	// Create console object
-	$console = new takteeconsole();
+	$console = new TakteeConsole();
 	
 	// Directory where console.js file lies.
 	$console.basePath = 'console/js';
@@ -49,6 +49,8 @@ function startConsole ()
 			{
 				// Show output to Buffer
 				$console.addCodeBufferOutputString ( data );
+				
+				//$console.clearCode();
 				
 				// Focus the input command
 				$console.inputFocus();
@@ -93,8 +95,10 @@ $(function(){
 	//================================== Test code ======================================
 	$('#btnCodeAddHello').click(function() {
 		$console.clearCode();
-		$console.addCode('// Say hello');
-		$console.addCode('_test [ helloWorld () ];');
+		$console.addCode('// Call user routine');
+		$console.addCode('// Several functions are dummy, you can write logic there.');
+		$console.addCode('// Files: ../taktee/functions/users/*.php');
+		$console.addCode('users;');
 		$console.execute();
 		// Got to the end of Buffer and Focus the input command
 		$console.inputFocus();
@@ -124,7 +128,7 @@ $(function(){
 	<div class="tools" style="display:none"><br>
 		<div class="pull-left">
 		
-		<button type="button" id="btnCodeAddHello">Hello Code</button> View source on <a href="https://github.com/blacksmoke26/Taktee" target="_blank">GitHub</a> </div>
+		<button type="button" id="btnCodeAddHello">Basic Example</button> View source on <a href="https://github.com/blacksmoke26/Taktee" target="_blank">GitHub</a> </div>
 		<div class="pull-right">Switch theme <a href="javascript:;" class="theme light" title="Light and Shine"></a> <a href="javascript:;" class="theme dark" title="Light"></a></div>
 	</div>
 </div>
