@@ -83,4 +83,12 @@ return array (
 		'msg' => 'parameter type specified but value is missing',
 		'category' => 'Runtime error',
 	),
+	60 => array (
+		'msg' => 'method `$method` not accessable',
+		'category' => 'Runtime error',
+	),
+	61 => array (
+		'msg' => 'undefined method',
+		'category' => 'Runtime error',
+	),
 );
