@@ -1,5 +1,7 @@
 <?php
 
+defined ('DS') | define ( 'DS', DIRECTORY_SEPARATOR );
+
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
@@ -25,7 +27,7 @@ class Taktee_Autoloader
     static public function register ()
     {
         ini_set ( 'unserialize_callback_func', 'spl_autoload_call' );
-        spl_autoload_register (  [ __CLASS__, 'autoload' ] );
+        spl_autoload_register (  array ( __CLASS__, 'autoload' ) );
     }
 
 	/**
@@ -37,7 +39,7 @@ class Taktee_Autoloader
      */
     static public function autoload ( $class )
     {
-		$coreClasses =  [
+		$coreClasses =  array (
 			'TakteeBase' => 'base/Base.php',
 			'TakteeUtils' => 'base/Utils.php',
 			'Taktee' => 'Taktee.php',
@@ -54,7 +56,7 @@ class Taktee_Autoloader
 			'TakteeOutputNull' => 'output/OutputNull.php',
 			'TakteeOutputDebug' => 'output/OutputDebug.php',
 			'TakteeOuputBeautifier' => 'output/OuputBeautifier.php',
-		];
+		);
 
 		if ( $coreClasses[$class] )
 		{
