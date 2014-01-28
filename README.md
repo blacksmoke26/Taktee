@@ -3,20 +3,22 @@
 
 ### Description
 
-Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of verse); the pause (in reading poetry), The custom language parser. I just developing it in free time for fun and practice. I love to write PCRE patterns and learn new programming ways to improve my skills and knowledge. I always want to have my custom language which do quick tasks on web via command line web tool. After getting this idea, i started to work on that parser, but honeslty I love my URDU language that's why I named it in URDU.
+Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of verse); the pause (in reading poetry), The custom language parser using with Taktee Console. I just developing it in free time for fun and practice. I love to write PCRE patterns and learn new programming ways to improve my skills and knowledge. I always want to have my custom language which do quick tasks on web via command line web tool. After getting this idea, i started to work on that parser, but honeslty I love my URDU language that's why I named it in URDU.
+
+**Note**: Experimental (can be change without notice)
 
 #### Features
 - Parse line by line based on statments ended by semi colon (;).
 - Opening and Closing Braces (can be change)
 - Comment lines
-- Multi line statments on each line
+- Multi statments on each line
 - Better error handling
 - Internationalization (i18n) of error messages
 - Type hinting/casting for Parameters
-- Easily customized and well documented
-- Plugin based, develope Libraries, Functions without touching core/base files
+- Customizable and well documented
+- Support Plugins (develope Libraries, Functions without touching core/base files)
 - Beautify Output
-- Detailed debug information
+- Detailed debug information (if plugin provides)
 - Easy to use
 
 ### Links
@@ -28,30 +30,25 @@ Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of ve
 
 #### Global/Defined functions
 ```php
-# Debug Mode (Remove or comment the line for off)
+# Debug Mode (comment or remove the line on production)
 define ('TAKTEE_DUBUG_OUTPUT', 1);
 
-# Add executed code expression in Output (Remove or comment the line for off)
+# Add executed code expression in Output (comment or remove the line on production)
 define ('TAKTEE_DEBUG_CODE_OUTPUT', 1);
 
 // Include Taktee
 include ( "bootstrap.php" );
 
-/**
- * Say Hay to $name
- * 
- * @param string $name Any name
- */
-function sayHay ( $name )
-{
-    echo 'Hay ' . $name . '!';
-}
-
 $code = '
 @{
-	// It is the Function library Plugin, @see /functions/TakteeFunctionCommands.php
-	// I use ^core for already defined global function
-	^core [ sayHay ( "Junaid Atari" ) ];
+    // Get all the Subroutines name
+    users.getAll();
+        
+    // Get subroutine property value
+    users.junaid.name;
+        
+    // Gte subroutine property value by method
+    users.ali.get ("name");
 }
 ';
 
@@ -72,8 +69,11 @@ echo TakteeOuputBeautifier::asText ( $taktee->getOutput() );
 ```
 
 ##### Output
-````text
-Hay Junaid Atari!
+````html
+subroutine <strong>ali</strong>
+subroutine <strong>junaid</strong>
+Junaid Atari
+Muhammad Ali
 ````
 
 ##### Debug Output
@@ -88,25 +88,27 @@ Array
         (
             [0] => TakteeOutput Object
                 (
-                    [output:protected] => Hay Junaid Atari!
-                    [code:protected] => ^core [ sayHay ( "Junaid Atari" ) ];
-                    [debug:protected] => TakteeOutputDebug Object
-                        (
-                            [debugInfo:protected] => Array
-                                (
-                                    [type] => core
-                                    [command] => core
-                                    [function] => sayHay
-                                    [params] => Array
-                                        (
-                                            [0] => Junaid Atari
-                                        )
+                    [output:protected] => subroutine <strong>ali</strong>
+subroutine <strong>junaid</strong>
+                    [code:protected] => users.getAll();
+                    [debug:protected] => 
+                    [lineNo:protected] => 3
+                )
 
-                                )
+            [1] => TakteeOutput Object
+                (
+                    [output:protected] => Junaid Atari
+                    [code:protected] => users.junaid.name;
+                    [debug:protected] => 
+                    [lineNo:protected] => 6
+                )
 
-                        )
-
-                    [lineNo:protected] => 4
+            [2] => TakteeOutput Object
+                (
+                    [output:protected] => Muhammad Ali
+                    [code:protected] => users.ali.get ("name");
+                    [debug:protected] => 
+                    [lineNo:protected] => 9
                 )
 
         )
