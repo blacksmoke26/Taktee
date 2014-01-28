@@ -3,7 +3,9 @@
 
 ### Description
 
-Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of verse); the pause (in reading poetry), The custom language parser. I just developing it in free time for fun and practice. I love to write PCRE patterns and learn new programming ways to improve my skills and knowledge. I always want to have my custom language which do quick tasks on web via command line web tool. After getting this idea, i started to work on that parser, but honeslty I love my URDU language that's why I named it in URDU.
+Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of verse); the pause (in reading poetry), The custom language parser using with Taktee Console. I just developing it in free time for fun and practice. I love to write PCRE patterns and learn new programming ways to improve my skills and knowledge. I always want to have my custom language which do quick tasks on web via command line web tool. After getting this idea, i started to work on that parser, but honeslty I love my URDU language that's why I named it in URDU.
+
+**Note**: Experimental (can be change without notice)
 
 #### Features
 - Parse line by line based on statments ended by semi colon (;).
