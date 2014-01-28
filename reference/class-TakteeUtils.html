@@ -7,7 +7,7 @@
 	<title>Class TakteeUtils | Taktee - Custom Language Parser</title>
 
 	<script type="text/javascript" src="resources/combined.js?4220437581"></script>
-	<script type="text/javascript" src="elementlist.js?1612322273"></script>
+	<script type="text/javascript" src="elementlist.js?4033460078"></script>
 	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
 
 </head>
@@ -21,10 +21,6 @@
 		<div id="groups">
 			<h3>Packages</h3>
 			<ul>
-				<li><a href="package-Functions.html">Functions</a>
-						</li>
-				<li><a href="package-Libraries.html">Libraries</a>
-						</li>
 				<li><a href="package-None.html">None</a>
 						</li>
 				<li class="active"><a href="package-Taktee.html">Taktee</a>
@@ -134,6 +130,8 @@
 				Junaid Atari &lt;<a
 href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
 				<b>Version:</b>
+				0.2<br />
+				<b>Since:</b>
 				0.1<br />
 		<b>Located at</b> taktee/base/Utils.php<br />
 	</div>
@@ -142,6 +140,159 @@ href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
 
 	<table class="summary" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="removeNumericIndexes" id="_removeNumericIndexes">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_removeNumericIndexes">#</a>
+		<code>removeNumericIndexes( <span>array <var>&amp; $ary</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Remove numeric indexes and empty elements from Array</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Remove numeric indexes and empty elements from Array</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ary</var></dt>
+					<dd><code>array</code><br>$ary Array to check</dd>
+				</dl></div>
+
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOuputByFunction" id="_getOuputByFunction">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOuputByFunction">#</a>
+		<code>getOuputByFunction( <span>string <var>$name</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span> () </span> )</code>
+
+		<div class="description short">
+			
+<p>Execute the function and return output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute the function and return output</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Function name</dd>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params Paramaters Array</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+				<h4>Version</h4>
+				<div class="list">
+						1.0<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOutputByMethod" id="_getOutputByMethod">
+
+		<td class="attributes"><code>
+			 public static
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOutputByMethod">#</a>
+		<code>getOutputByMethod( <span>object <var>$class</var></span>, <span>string <var>$name</var></span>, <span>array <var>$paramsRaw</var> = <span class="php-quote">''</span></span>, <span>array <var>$options</var> = <span class="php-keyword1">array</span> () </span> )</code>
+
+		<div class="description short">
+			
+<p>Execute the object's method and return output</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Execute the object's method and return output</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$class</var></dt>
+					<dd><code>object</code><br>$obj Class object</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name Method name</dd>
+					<dt><var>$paramsRaw</var></dt>
+					<dd><code>array</code><br>$params Paramaters Array</dd>
+					<dt><var>$options</var></dt>
+					<dd><code>array</code><br>$options Properties for the constructure</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+				<h4>Version</h4>
+				<div class="list">
+						1.0<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="arrayToObject" id="_arrayToObject">
 
 		<td class="attributes"><code>
@@ -190,6 +341,102 @@ href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
 				<h4>Version</h4>
 				<div class="list">
 						1.0<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerClassByFile" id="_registerClassByFile">
+
+		<td class="attributes"><code>
+			 public static
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerClassByFile">#</a>
+		<code>registerClassByFile( <span>string <var>$classPath</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register the class file</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register the class file</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$classPath</var></dt>
+					<dd><code>string</code><br>$classPath Path to php class file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>True on registered | False on fail<br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="replaceVariables" id="_replaceVariables">
+
+		<td class="attributes"><code>
+			 public static
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_replaceVariables">#</a>
+		<code>replaceVariables( <span>string <var>$str</var></span>, <span>array <var>$vars</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Replace array keys with value from string</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Replace array keys with value from string</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd><code>string</code><br>$str Text to replace</dd>
+					<dt><var>$vars</var></dt>
+					<dd><code>array</code><br>$vars Array variables</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+				<h4>Author</h4>
+				<div class="list">
+						Junaid Atari &lt;<a
+href="mailto:mj.atari&#64;gmail.com">mj.atari&#64;<!---->gmail.com</a>&gt;<br />
 				</div>
 
 
