@@ -28,10 +28,10 @@ Taktee: (Urdu: تقطیع) means cutting into parts, dissection; scanning (of ve
 
 #### Global/Defined functions
 ```php
-# Debug Mode (Remove or comment the line for off)
+# Debug Mode (comment or remove the line on production)
 define ('TAKTEE_DUBUG_OUTPUT', 1);
 
-# Add executed code expression in Output (Remove or comment the line for off)
+# Add executed code expression in Output (comment or remove the line on production)
 define ('TAKTEE_DEBUG_CODE_OUTPUT', 1);
 
 // Include Taktee
@@ -42,10 +42,10 @@ $code = '
 	// Routine
     users.getAll();
         
-    // Subroutine property
+    // Get subroutine's property value
     users.junaid.name;
         
-    // Subrutine get property
+    // Subroutine get property
     users.ali.get ("name");
 }
 ';
