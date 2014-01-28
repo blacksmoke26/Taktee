@@ -39,13 +39,13 @@ include ( "bootstrap.php" );
 
 $code = '
 @{
-	// Routine
+    // Get all the Subroutines name
     users.getAll();
         
-    // Get subroutine's property value
+    // Get subroutine property value
     users.junaid.name;
         
-    // Subroutine get property
+    // Gte subroutine property value by method
     users.ali.get ("name");
 }
 ';
