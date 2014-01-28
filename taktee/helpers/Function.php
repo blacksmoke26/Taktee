@@ -12,7 +12,7 @@
  * @package		Taktee
  * @author		Junaid Atari <mj.atari@gmail.com>
  * @copyright	2014 Junaid Atari
- * @version		0.1
+ * @version		0.2
  * @license		http://www.apache.org/licenses/LICENSE-2.0.html
  * @see			TakteeFunctionCommands
  */
@@ -27,7 +27,7 @@ class TakteeFunction
 	 * @access protected
      * @var array Configuration data
      */
-	protected $config = [];
+	protected $config = array ();
 
 	/**
 	 *@var string Code expression
@@ -103,6 +103,174 @@ class TakteeFunction
 		{
 			$this->$name = $value;
 		}
+		
+		$this->init();
+	}
+
+	/**
+	 * Class intializer
+	 *
+	 * @access protected
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @return void
+	 */
+	protected function init () {}
+	
+	/**
+	 * Check and validation the statment by PCRE pattern
+	 *
+	 * @access public
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @param string $pattern PCRE patten
+	 * @param string $flags PCRE flags
+	 * @return mixed Array on match | NULL
+	 */
+	protected function checkStatment ( $pattern, &$matches = array(), $flags = '' )
+	{
+		$matches = array ();
+		
+		if ( !preg_match ( '/^'.$pattern.';?$/'.$flags, $this->expr, $matches ) )
+			return false;
+		
+		return true;
+	}
+
+	/**
+	 * Event function: Execute this function after main Taktee execution
+	 *
+	 * @access public
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @return void
+	 */
+	public function beforeExecute () {}
+
+	/**
+	 * Execute the parsed expression's logic
+	 *
+	 * @access public
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @return void
+	 */
+	public function execute () {}
+
+	/**
+	 * Event function: Execute this function after main Taktee execution
+	 *
+	 * @access public
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 * @see TakteeOutput
+	 * @see TakteeOutputNull
+	 *
+	 * @param object $outputObj Output object
+	 * @return object TakteeOutput | TakteeOutputNull
+	 */
+	public function afterExecute ( $outputObj )
+	{
+		return $outputObj;
+	}
+
+	/**
+	 * Get the output value of Functions plugin
+	 *
+	 * @access public
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @return mixed
+	 */
+	public function getValue ()
+	{
+		return $this->output;
+	}
+	
+	/**
+	 * Get the base name of Function
+	 *
+	 * @access protected
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @return string
+	 */
+	protected function getBaseName ()
+	{
+		return strtolower (
+			str_replace ( $this->config->functions->suffix, '', get_class( $this ) )
+		);
+	}
+	
+	/**
+	 * Get the Function's library path by name
+	 *
+	 * @access protected
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @param string $name Name of lib (case sensitive)
+	 * @return string
+	 */
+	protected function getLibPathByName ( $name )
+	{
+		return $this->getLibDir() . DS . $this->getLibName ( $name ) . '.php';
+	}
+	
+	/**
+	 * Get the Function's library (directory) path
+	 *
+	 * @access protected
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @return string
+	 */
+	protected function getLibDir ()
+	{
+		$obj = new ReflectionObject($this);		
+		return dirname ( $obj->getFilename() ) . DIRECTORY_SEPARATOR . $this->getBaseName();
+	}
+	
+	/**
+	 * Get the Function's library name by name
+	 *
+	 * @access protected
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @param string $name Name of lib (case sensitive)
+	 * @return string
+	 */	
+	protected function getLibName ( $name )
+	{
+		return $name . '_' . get_class ( $this );
+	}
+	
+	/**
+	 * Set the output
+	 *
+	 * @access protected
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @param string $output Output text
+	 * @param array $debugInfo Debug Information
+	 * @return void
+	 */
+	protected function setOutput ( $output, array $debugInfo = array () )
+	{
+		$this->output = new TakteeOutput ( $output, $this->lineNo, $this->expr, $debugInfo );
+		return;
+	}
+	
+	/**
+	 * Set the output as NULL
+	 *
+	 * @access protected
+	 * @author Junaid Atari <mj.atari@gmail.com>
+	 *
+	 * @return void
+	 */
+	protected function setNullOutput ()
+	{
+		$this->output = new TakteeOutputNull ();
+		return;
 	}
 	
 	/**
@@ -163,67 +331,5 @@ class TakteeFunction
 		$this->output = $error;
 		
 		return false;
-	}
-
-	/**
-	 * Parce expression/line code
-	 * Note: Method should be overrided
-	 *
-	 * @access protected
-	 * @author Junaid Atari <mj.atari@gmail.com>
-	 *
-	 * @return void
-	 */
-	protected function parse () {}
-
-	/**
-	 * Event function: Execute this function after main Taktee execution
-	 *
-	 * @access public
-	 * @author Junaid Atari <mj.atari@gmail.com>
-	 *
-	 * @return void
-	 */
-	public function beforeExecute () {}
-
-	/**
-	 * Execute the parsed expression's logic
-	 *
-	 * @access public
-	 * @author Junaid Atari <mj.atari@gmail.com>
-	 *
-	 * @return void
-	 */
-	public function execute () {}
-
-	/**
-	 * Event function: Execute this function after main Taktee execution
-	 *
-	 * @access public
-	 * @author Junaid Atari <mj.atari@gmail.com>
-	 * @see TakteeOutput
-	 * @see TakteeOutputNull
-	 *
-	 * @param object $outputObj Output object
-	 * @return object TakteeOutput | TakteeOutputNull
-	 */
-	public function afterExecute ( $outputObj )
-	{
-		return $outputObj;
-	}
-
-	/**
-	 * Get the output value of Functions plugin
-	 *
-	 * @see TakteeFunction::init ()
-	 *
-	 * @access public
-	 * @author Junaid Atari <mj.atari@gmail.com>
-	 *
-	 * @return mixed
-	 */
-	public function getValue ()
-	{
-		return $this->output;
 	}
 }
