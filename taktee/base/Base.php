@@ -562,25 +562,6 @@ class TakteeBase
 	}
 
 	/**
-     * Replace array keys with value from string
-     *
-	 * @access public
-	 * @author Junaid Atari <mj.atari@gmail.com>
-	 *
-	 * @param string $str Text to replace
-	 * @param array $vars Array variables
-	 * @return string
-	 */
-	protected static function replaceVariables ( $str, array $vars )
-	{
-		return str_replace (
-			array_keys ( $vars ),
-			array_values ( $vars ),
-			$str
-		);
-	}
-
-	/**
 	 * Get the error details by number
 	 *
 	 * @param int $id Error ID
@@ -608,7 +589,7 @@ class TakteeBase
 		
 		if ( isset ($list[$id]) )
 		{
-			$list[$id]['msg'] = self::replaceVariables ( $list[$id]['msg'], $vars );
+			$list[$id]['msg'] = TakteeUtils::replaceVariables ( $list[$id]['msg'], $vars );
 			
 			return $list[$id];
 		}
@@ -662,7 +643,7 @@ class TakteeBase
 			&& trim ( $options['category'] ) )
 		{		
 			$msg = array (
-				'msg' => self::replaceVariables ( $options['msg'], $vars ),
+				'msg' => TakteeUtils::replaceVariables ( $options['msg'], $vars ),
 				'category' => $options['category'],
 			);
 		}
